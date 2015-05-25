@@ -1,0 +1,13 @@
+<form {{action 'register' on='submit'}}>
+
+  <label for="email">Email</label>
+  {{input value=email placeholder='Enter Email'}}
+
+  <label for="password">Password</label>
+  {{input value=password placeholder='Enter Password' type='password'}}
+
+  <label for="password_confirmation">Password Confirmation</label>
+  {{input value=password_confirmation placeholder='Enter Password' type='password'}}
+
+  <button type="submit">Sign Up</button>
+</form>
