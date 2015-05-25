@@ -39,6 +39,10 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
+  ENV['simple-auth-devise'] = {
+    resourceName: 'user'
+  }
+
   if (environment === 'production') {
 
   }
