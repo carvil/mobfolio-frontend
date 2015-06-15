@@ -1,0 +1,73 @@
+{{!--
+Icon
+Name
+(*) (Max 10) Print-screens
+Date worked on
+Description (small)
+(*) Description (long)
+(*) Stars
+(*) A few reviews
+(Max 5) Technical details (provide a list, e.g. customized UI, persistency, multi-threading, etc)
+(*) Used frameworks (tags?)
+(*) Technical description including what was done by the portfolio owner
+(*) Credits (with links)
+(*) Team size
+(*) First launch date
+App available in the App Store? Yes or no field
+(*) App Store link
+(*) If not in the App Store, explain why (e.g. under development, business decision)
+(*) Total downloads until now (not sure about this one)
+(*) Github link, if opensource
+(*) Personal project or company project?
+(*) If company, which one?
+View next app
+--}}
+
+
+<form>
+<h2 id='title'>Add an app</h2>
+<label for="appName">Application name</label>
+{{input value=appName placeholder='Enter application name' required="required"}}
+
+<br/>
+
+<label for="appIcon">Application icon</label>
+{{#file-picker fileLoaded="iconLoaded" required="required"}}
+    Drag here or click to upload the app icon
+{{/file-picker}}
+
+<br/>
+
+<label for="appSmallDescription">Application small description</label>
+{{input value=appSmallDescription placeholder='Enter a small description' required="required"}}
+
+<br/>
+
+<label for="appLongDescription">Application long description</label>
+{{input value=appLongDescription placeholder='Enter a long description'}}
+
+<br/>
+
+<label for="screenshots">Screenshots</label>
+{{#file-picker fileLoaded="screenshotsLoaded"}}
+    Drag here or click to upload the app screenshots
+{{/file-picker}}
+
+<br/>
+
+<label for="project-date">Start and end date of the project</label>
+{{date-picker date=project-date-from valueFormat='YYYY-MM-DD'}}
+{{date-picker date=project-date-end valueFormat='YYYY-MM-DD'}}
+
+<br/>
+
+<label for="first-launch-date">First launch date in the AppStore</label>
+{{date-picker date=first-launch-date valueFormat='YYYY-MM-DD'}}
+
+<br/>
+
+<input type="checkbox" name="app-store" value="app-store">Available in the App Store
+
+<br/>
+
+</form>
