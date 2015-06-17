@@ -4,6 +4,7 @@ export default Ember.Controller.extend({
 	actions: {
 		addApp: function() {
 			this.get('model').save();
+			this.transitionTo('apps');
 		}
 	}
 });
