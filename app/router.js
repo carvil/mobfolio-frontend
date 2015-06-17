@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('login');
   this.route('signup');
   this.route('protected');
+  this.route('apps');
   this.resource('add-app');
 });
 
