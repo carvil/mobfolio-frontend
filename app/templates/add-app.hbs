@@ -24,11 +24,12 @@ View next app
 --}}
 
 
-<form>
-<h2 id='title'>Add an app</h2>
-<label for="appName">Application name</label>
-{{input value=appName placeholder='Enter application name' required="required"}}
+<form {{action 'addApp' on='submit'}}>
+  <h2 id='title'>Add an app</h2>
+  <label for="appName">Application name</label>
+  {{input value=model.name placeholder='Enter application name' required="required"}}
 
+{{!--
 <br/>
 
 <label for="appIcon">Application icon</label>
@@ -69,5 +70,9 @@ View next app
 <input type="checkbox" name="app-store" value="app-store">Available in the App Store
 
 <br/>
+<br/>
+--}}
+
+<button type="submit">Add app</button>
 
 </form>

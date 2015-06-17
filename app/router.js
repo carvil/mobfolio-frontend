@@ -9,7 +9,7 @@ Router.map(function() {
   this.route('login');
   this.route('signup');
   this.route('protected');
-  this.route('add-app');
+  this.resource('add-app');
 });
 
 export default Router;
