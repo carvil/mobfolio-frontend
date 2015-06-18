@@ -1,13 +1,13 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+export default Ember.Controller.extend({
 	actions: {
-		editApp: function(app) {
+		edit_app: function(app) {
 			this.set('isEditing', true);
 		},
 		acceptChanges: function() {
 			this.set('isEditing', false);
-			this.sendAction('action', this.get("app"));
+			//this.sendAction('action', this.get("app"));
 		}
 	}
 });

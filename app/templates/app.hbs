@@ -1,5 +1,6 @@
 {{#if isEditing}}
-<h1>{{model.name}}</h1>
+{{input type="text" class="edit" value=model.name focus-out="acceptChanges"
+        insert-newline="acceptChanges"}}
 {{else}}
-<h1>{{model.name}}</h1>
+<h1><label {{action "edit_app" on="doubleClick"}}>{{model.name}}</label></h1>
 {{/if}}

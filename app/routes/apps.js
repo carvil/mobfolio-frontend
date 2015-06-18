@@ -10,6 +10,14 @@ export default Ember.Route.extend({
 		},
 		editApp: function(app) {
 			this.transitionTo('edit-app');
-		}
+		},
+		acceptChanges: function(app) {
+        	if (Ember.isEmpty(todo.get('app_name'))) {
+        		this.send('deleteApp', app);
+        	}
+        	else {
+        		app.save();
+        	}
+        }
 	}
 });
