@@ -5,9 +5,9 @@ export default Ember.Controller.extend({
 		edit_app: function(app) {
 			this.set('isEditing', true);
 		},
-		acceptChanges: function() {
+		accept_changes: function() {
 			this.set('isEditing', false);
-			//this.sendAction('action', this.get("app"));
+			this.sendAction('action', this.get("app"));
 		}
 	}
 });
