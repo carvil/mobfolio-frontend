@@ -1,1 +1,4 @@
-<li>{{app.name}} <button {{action "deleteApp" app}} class="destroy">Delete</button></li>
+<li>{{#link-to 'app' app}}{{app.name}}{{/link-to}}  
+	<button {{action "deleteApp" app}} class="destroy">Delete</button>
+	<button {{action "editApp" app}} class="edit">Edit</button>
+</li>

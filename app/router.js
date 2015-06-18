@@ -10,7 +10,9 @@ Router.map(function() {
   this.route('signup');
   this.route('protected');
   this.route('apps');
-  this.resource('add-app');
+  this.route('app', { path: '/app/:app_id' });
+  this.route('edit-app');
+  this.route('add-app');
 });
 
 export default Router;

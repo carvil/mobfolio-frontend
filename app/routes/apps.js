@@ -7,6 +7,9 @@ export default Ember.Route.extend({
 	actions: {
 		deleteApp: function(app) {
 			app.deleteRecord();
+		},
+		editApp: function(app) {
+			this.transitionTo('edit-app');
 		}
 	}
 });
