@@ -22,7 +22,8 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember server`
+* Start the backend API server on port 3000
+* `ember server --proxy http://0.0.0.0:3000`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Code Generators
