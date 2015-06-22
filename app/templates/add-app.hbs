@@ -23,11 +23,20 @@ App available in the App Store? Yes or no field
 View next app
 --}}
 
-
 <form {{action 'addApp' on='submit'}}>
   <h2 id='title'>Add an app</h2>
   <label for="appName">Application name</label>
-  {{input value=model.name placeholder='Enter application name' required="required"}}
+{{!--
+  {{input value=model.name placeholder='Enter application name'
+  required='required'}}
+--}}
+
+  {{input value=model.name placeholder='Enter application name'}}
+  {{#each model.errors.name as |error|}}
+    <div class="error">
+      {{error.message}}
+    </div>
+  {{/each}}
 
 {{!--
 <br/>
