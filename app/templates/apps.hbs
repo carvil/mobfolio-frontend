@@ -1,7 +1,7 @@
 <h1>Apps</h1>
 
 <ul>
-{{#each app in model}}
+{{#each model as |app|}}
   {{app-item app=app deleteApp="deleteApp" editApp="editApp"}}
 {{/each}}
 </ul>
