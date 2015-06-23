@@ -7,6 +7,7 @@ export default Ember.Route.extend({
 	actions: {
 		deleteApp: function(app) {
 			app.deleteRecord();
+      app.save();
 		}
 	}
 });
